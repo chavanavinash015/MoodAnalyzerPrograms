@@ -8,6 +8,12 @@ public class MoodAnalyzer {
     }
     public MoodAnalyzer(String message) {
         this.messege = message;
+        analyzeMood();
+    }public String getMessege(){
+        return messege;
+    }
+    public void setMessege(String messege){
+        this.messege = messege;
     }
     public String analyzeMood() {
         if (messege.contains("Sad"))
