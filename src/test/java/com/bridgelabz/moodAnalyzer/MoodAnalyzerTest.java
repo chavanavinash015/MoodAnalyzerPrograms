@@ -2,7 +2,6 @@ package com.bridgelabz.moodAnalyzer;
 
 import org.junit.jupiter.api.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MoodAnalyzerTest {
 
@@ -23,8 +22,16 @@ public class MoodAnalyzerTest {
 
     @Test
     public void givenMessage_WhenNotSad_ShouldReturn_Happy() {
-        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("This is Happy Messgae");
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer("This is Happy Message");
         String mood2 = moodAnalyzer.analyzeMood();
         Assertions.assertEquals("HAPPY",mood2);
     }
+
+    @Test
+    public void givenNullMood_ShouldReturn_Happy() {
+        MoodAnalyzer moodAnalyzer = new MoodAnalyzer(null);
+        String mood3 = moodAnalyzer.analyzeMood();
+        Assertions.assertEquals("HAPPY",mood3);
+    }
+
 }
